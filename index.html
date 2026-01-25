@@ -360,7 +360,7 @@
             border-radius: 24px;
             padding: 40px;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             transition: all 0.4s ease;
         }
 
@@ -736,7 +736,11 @@
 
             /* Testimonials Mobile */
             .testimonials {
-                padding: 60px 16px;
+                padding: 60px 12px;
+            }
+
+            .testimonials .container {
+                padding: 0;
             }
 
             .section-header {
@@ -758,9 +762,10 @@
 
             .testimonial-card {
                 grid-template-columns: 1fr !important;
-                gap: 24px;
-                padding: 24px;
+                gap: 20px;
+                padding: 16px;
                 border-radius: 20px;
+                overflow: visible;
             }
 
             .testimonial-card:nth-child(even) .testimonial-content,
@@ -779,26 +784,29 @@
             }
 
             /* VIDEO FIX MOBILE - Ne pas couper la vidéo */
+            .testimonial-content {
+                width: 100%;
+                max-width: 100%;
+            }
+
             .testimonial-video {
                 border-radius: 12px;
                 width: 100%;
+                max-width: 100%;
                 padding-top: 56.25%; /* Maintient le ratio 16:9 */
                 position: relative;
-                overflow: visible;
+                overflow: hidden;
+                background: var(--bg-primary);
             }
 
             .testimonial-video iframe {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
+                width: 100% !important;
+                height: 100% !important;
                 border-radius: 12px;
-            }
-
-            .testimonial-content {
-                width: 100%;
-                overflow: visible;
+                border: none;
             }
 
             .testimonial-text {
@@ -922,11 +930,11 @@
             }
 
             .testimonials {
-                padding: 48px 12px;
+                padding: 48px 8px;
             }
 
             .testimonial-card {
-                padding: 16px;
+                padding: 12px;
                 border-radius: 16px;
             }
 
@@ -937,8 +945,6 @@
             /* VIDEO FIX SMALL MOBILE */
             .testimonial-video {
                 border-radius: 10px;
-                margin: 0 -4px;
-                width: calc(100% + 8px);
             }
 
             .testimonial-video iframe {
